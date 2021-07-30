@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:randolina/screens/actualite.dart';
 import 'package:randolina/screens/homePage.dart';
 
 class HomeWidget extends StatefulWidget {
@@ -10,14 +11,14 @@ class _HomeWidgetState extends State<HomeWidget> {
   int selectIndex = 0;
   int currentTab = 0;
   List<Widget> widgetsOptions = [
-    HomePage('1'),
+    Actualits(),
     HomePage('2'),
     HomePage('3'),
     HomePage('4'),
     HomePage('5'),
   ];
   final PageStorageBucket bucket = PageStorageBucket();
-  Widget currentScreen = HomePage('1');
+  Widget currentScreen = Actualits();
   void onTapBottomNavigation(index) {
     setState(() {
       selectIndex = index;
@@ -56,7 +57,7 @@ class _HomeWidgetState extends State<HomeWidget> {
                     minWidth: 40,
                     onPressed: () {
                       setState(() {
-                        currentScreen = HomePage('1');
+                        currentScreen = Actualits();
                         currentTab = 0;
                       });
                     },

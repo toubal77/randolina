@@ -53,6 +53,10 @@ flutter:
     - assets/icons/Store.png
     - assets/icons/Vector 2.png
     - assets/icons/Chat.png
+    - assets/icons/akar-icons_search.png
+    - assets/icons/Event Club Icone.png
+    - assets/icons/RandoLina (13) 1.png
+    - assets/icons/Vector.png
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
