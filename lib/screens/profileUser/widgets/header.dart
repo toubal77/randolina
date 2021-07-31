@@ -13,6 +13,7 @@ class Header extends StatefulWidget {
 
 class _HeaderState extends State<Header> {
   bool isExpand = false;
+
   @override
   Widget build(BuildContext context) {
     return Stack(
@@ -49,10 +50,9 @@ class _HeaderState extends State<Header> {
                 ),
                 child: SingleChildScrollView(
                   child: ReadMoreText(
-                    'Etudiant L3 Chimie GPManipulateur en imagerie medicale Like :  Sport , Musique.',
-                    trimLength: isExpand ? 30 : 50,
+                    'Etudiant L3 Chimie GPManipulateur en imagerie medicale Like :  Sport , Musique.Etudiant L3 Chimie GPManipulateur en imagerie medicale Like :  Sport , Musique.Etudiant L3 Chimie GPManipulateur en imagerie medicale Like :  Sport , Musique.',
                     trimLines: 3,
-                    trimMode: TrimMode.Length,
+                    trimMode: TrimMode.Line,
                     trimCollapsedText: ' More',
                     trimExpandedText: 'less',
                     callback: (value) {
