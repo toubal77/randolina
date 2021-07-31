@@ -266,10 +266,15 @@ class _ActualitsState extends State<Actualits> {
                                   itemBuilder: (_) => [
                                     PopupMenuItem(
                                       child: Container(
+                                        width: 191,
+                                        height: 60,
                                         child: Column(
                                           mainAxisAlignment:
                                               MainAxisAlignment.spaceBetween,
                                           children: [
+                                            SizedBox(
+                                              height: 3,
+                                            ),
                                             Divider(
                                               height: 3,
                                               color:
@@ -311,6 +316,9 @@ class _ActualitsState extends State<Actualits> {
                                               height: 3,
                                               color:
                                                   Color.fromRGBO(0, 0, 0, 0.25),
+                                            ),
+                                            SizedBox(
+                                              height: 3,
                                             ),
                                           ],
                                         ),
