@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:randolina/screens/actualite.dart';
 import 'package:randolina/screens/homePage.dart';
-import 'package:randolina/screens/user_profile.dart';
+import 'package:randolina/screens/profileUser/user_profile.dart';
 
 class HomeWidget extends StatefulWidget {
   @override
