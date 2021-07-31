@@ -301,10 +301,26 @@ class _ActualitsState extends State<Actualits> {
                                                     ),
                                                   ),
                                                   Container(
-                                                    width: 17,
-                                                    height: 17,
-                                                    child: Image.asset(
-                                                        'assets/icons/Vector 4.png'),
+                                                    width: 22,
+                                                    height: 22,
+                                                    child: Stack(
+                                                      children: [
+                                                        Image.asset(
+                                                          'assets/icons/Vector 4.png',
+                                                        ),
+                                                        Positioned(
+                                                          top: 7,
+                                                          left: 7,
+                                                          child: Container(
+                                                            width: 5,
+                                                            height: 5,
+                                                            child: Image.asset(
+                                                              'assets/icons/Vector 5.png',
+                                                            ),
+                                                          ),
+                                                        ),
+                                                      ],
+                                                    ),
                                                   ),
                                                 ],
                                               ),
