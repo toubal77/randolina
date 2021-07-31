@@ -1,6 +1,16 @@
 import 'package:flutter/material.dart';
 
-class Actualits extends StatelessWidget {
+enum FilterOptions {
+  Report_this_post,
+}
+
+class Actualits extends StatefulWidget {
+  @override
+  _ActualitsState createState() => _ActualitsState();
+}
+
+class _ActualitsState extends State<Actualits> {
+  late bool showPopMenu;
   List _store = [
     {
       'image': 'assets/images/évent 1.png',
@@ -31,6 +41,7 @@ class Actualits extends StatelessWidget {
       'nom': 'AlphaRando',
     }
   ];
+
   List _post = [
     {
       'profile': 'assets/images/évent 1.png',
@@ -51,6 +62,7 @@ class Actualits extends StatelessWidget {
       'commentaire': '16 of the Best Places to visit in italy'
     },
   ];
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -227,15 +239,85 @@ class Actualits extends StatelessWidget {
                                     ],
                                   ),
                                 ),
-                                GestureDetector(
-                                  onTap: () {},
-                                  child: Container(
+                                PopupMenuButton(
+                                  shape: OutlineInputBorder(
+                                      borderRadius: BorderRadius.only(
+                                    topLeft: Radius.circular(10),
+                                    bottomLeft: Radius.circular(10),
+                                    bottomRight: Radius.circular(10),
+                                  )),
+                                  onSelected: (FilterOptions selectedValue) {
+                                    setState(() {
+                                      if (selectedValue ==
+                                          FilterOptions.Report_this_post) {
+                                        showPopMenu = true;
+                                      } else {
+                                        showPopMenu = false;
+                                      }
+                                    });
+                                  },
+                                  icon: Container(
                                     height: 15,
                                     margin: const EdgeInsets.only(
                                         top: 17, right: 5),
                                     child:
                                         Image.asset('assets/icons/options.png'),
                                   ),
+                                  itemBuilder: (_) => [
+                                    PopupMenuItem(
+                                      child: Container(
+                                        child: Column(
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.spaceBetween,
+                                          children: [
+                                            Divider(
+                                              height: 3,
+                                              color:
+                                                  Color.fromRGBO(0, 0, 0, 0.25),
+                                            ),
+                                            SizedBox(
+                                              height: 5,
+                                            ),
+                                            Container(
+                                              child: Row(
+                                                mainAxisAlignment:
+                                                    MainAxisAlignment
+                                                        .spaceBetween,
+                                                children: [
+                                                  Text(
+                                                    'Rport this post',
+                                                    style: TextStyle(
+                                                      fontSize: 14,
+                                                      fontWeight:
+                                                          FontWeight.w700,
+                                                      color: Colors.black
+                                                          .withOpacity(0.85),
+                                                      fontFamily: 'Lato-Light',
+                                                    ),
+                                                  ),
+                                                  Container(
+                                                    width: 17,
+                                                    height: 17,
+                                                    child: Image.asset(
+                                                        'assets/icons/Vector 4.png'),
+                                                  ),
+                                                ],
+                                              ),
+                                            ),
+                                            SizedBox(
+                                              height: 5,
+                                            ),
+                                            Divider(
+                                              height: 3,
+                                              color:
+                                                  Color.fromRGBO(0, 0, 0, 0.25),
+                                            ),
+                                          ],
+                                        ),
+                                      ),
+                                      value: FilterOptions.Report_this_post,
+                                    ),
+                                  ],
                                 ),
                               ],
                             ),
