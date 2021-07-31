@@ -177,6 +177,7 @@ class _UserProfileState extends State<UserProfile>
                                   _icons[i],
                               ],
                             ),
+                            color: Colors.white,
                           ),
                         ),
                       ];
