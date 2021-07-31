@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:randolina/screens/actualite.dart';
 import 'package:randolina/screens/homePage.dart';
+import 'package:randolina/screens/user_profile.dart';
 
 class HomeWidget extends StatefulWidget {
   @override
@@ -12,7 +13,7 @@ class _HomeWidgetState extends State<HomeWidget> {
   int currentTab = 0;
   List<Widget> widgetsOptions = [
     Actualits(),
-    HomePage('2'),
+    UserProfile(),
     HomePage('3'),
     HomePage('4'),
     HomePage('5'),
@@ -70,7 +71,7 @@ class _HomeWidgetState extends State<HomeWidget> {
                     minWidth: 40,
                     onPressed: () {
                       setState(() {
-                        currentScreen = HomePage('2');
+                        currentScreen = UserProfile();
                         currentTab = 1;
                       });
                     },
