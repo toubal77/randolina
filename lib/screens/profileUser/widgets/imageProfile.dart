@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 
+// ignore: must_be_immutable
 class ImageProfileHeader extends StatelessWidget {
-  const ImageProfileHeader({Key? key}) : super(key: key);
-
+  bool isExpand;
+  ImageProfileHeader(this.isExpand);
   @override
   Widget build(BuildContext context) {
     return Positioned(
-      bottom: 42,
+      bottom: isExpand ? 58 : 42,
       left: 16,
       child: Container(
         width: 95,

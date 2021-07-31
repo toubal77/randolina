@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 
+// ignore: must_be_immutable
 class FollowersHeader extends StatelessWidget {
-  const FollowersHeader({Key? key}) : super(key: key);
-
+  bool isExpand;
+  FollowersHeader(this.isExpand);
   @override
   Widget build(BuildContext context) {
     return Positioned(
       right: 30,
-      bottom: 10,
+      bottom: isExpand ? 0 : 10,
       child: Container(
         width: 120,
         height: 26,
