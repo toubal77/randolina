@@ -1,6 +1,17 @@
 import 'package:flutter/material.dart';
 
-class UserProfile extends StatelessWidget {
+enum FilterOptions {
+  EditProfile,
+  SingOut,
+}
+
+class UserProfile extends StatefulWidget {
+  @override
+  _UserProfileState createState() => _UserProfileState();
+}
+
+class _UserProfileState extends State<UserProfile> {
+  late bool showPopMenu;
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -39,11 +50,11 @@ class UserProfile extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.spaceAround,
                           children: [
                             Container(
-                              margin: const EdgeInsets.only(top: 30),
+                              margin: const EdgeInsets.only(top: 14),
                               child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.center,
                                 children: [
                                   Container(
-                                    alignment: Alignment.center,
                                     child: Row(
                                       children: [
                                         Container(
@@ -59,29 +70,78 @@ class UserProfile extends StatelessWidget {
                                             ),
                                           ),
                                         ),
-                                        SizedBox(
-                                          width: 10,
-                                        ),
-                                        Container(
-                                          width: 13,
-                                          height: 12,
-                                          child: Image.asset(
-                                            'assets/icons/Vector 6.png',
-                                            fit: BoxFit.cover,
+                                        PopupMenuButton(
+                                          shape: OutlineInputBorder(
+                                              borderRadius: BorderRadius.only(
+                                            topLeft: Radius.circular(10),
+                                            bottomLeft: Radius.circular(10),
+                                            bottomRight: Radius.circular(10),
+                                          )),
+                                          onSelected:
+                                              (FilterOptions selectedValue) {
+                                            setState(() {
+                                              if (selectedValue ==
+                                                  FilterOptions.EditProfile) {
+                                                showPopMenu = true;
+                                              } else {
+                                                showPopMenu = false;
+                                              }
+                                              if (selectedValue ==
+                                                  FilterOptions.SingOut) {
+                                                showPopMenu = true;
+                                              } else {
+                                                showPopMenu = false;
+                                              }
+                                            });
+                                          },
+                                          icon: Container(
+                                            width: 13,
+                                            child: Image.asset(
+                                              'assets/icons/Vector 6.png',
+                                              fit: BoxFit.cover,
+                                            ),
                                           ),
+                                          itemBuilder: (_) => [
+                                            PopupMenuItem(
+                                              child: Container(
+                                                child: Text(
+                                                  'Edit profil',
+                                                  style: TextStyle(
+                                                    fontSize: 16,
+                                                    fontWeight: FontWeight.w600,
+                                                    fontFamily: 'Lato-Light',
+                                                    color: Colors.black,
+                                                  ),
+                                                ),
+                                              ),
+                                              value: FilterOptions.EditProfile,
+                                            ),
+                                            PopupMenuItem(
+                                              child: Container(
+                                                child: Text(
+                                                  'Sign out',
+                                                  style: TextStyle(
+                                                    fontSize: 20,
+                                                    fontWeight: FontWeight.w800,
+                                                    color: Colors.black,
+                                                  ),
+                                                ),
+                                              ),
+                                              value: FilterOptions.SingOut,
+                                            ),
+                                          ],
                                         ),
                                       ],
                                     ),
                                   ),
-                                  Container(
-                                    child: Text(
-                                      'Vloger',
-                                      style: TextStyle(
-                                        fontSize: 14,
-                                        color: Color(0xFF40A3DB),
-                                        fontFamily: 'Lato-Light',
-                                        fontWeight: FontWeight.w500,
-                                      ),
+                                  Text(
+                                    'Vloger',
+                                    textAlign: TextAlign.center,
+                                    style: TextStyle(
+                                      fontSize: 14,
+                                      color: Color(0xFF40A3DB),
+                                      fontFamily: 'Lato-Light',
+                                      fontWeight: FontWeight.w500,
                                     ),
                                   ),
                                 ],
