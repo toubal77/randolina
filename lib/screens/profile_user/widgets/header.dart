@@ -61,8 +61,8 @@ class _HeaderState extends State<Header> {
                       });
                     },
                     style: TextStyle(
-                      fontSize: 14,
-                      fontFamily: 'Lato-Light',
+                      fontSize: 11,
+                      fontFamily: 'Lato-Black',
                       color: Colors.black.withOpacity(0.87),
                       fontWeight: FontWeight.normal,
                     ),

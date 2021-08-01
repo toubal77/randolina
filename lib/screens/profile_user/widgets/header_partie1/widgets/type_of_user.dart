@@ -8,9 +8,9 @@ class TypeOfUser extends StatelessWidget {
     return Text(
       'Vloger',
       style: TextStyle(
-        fontSize: 14,
+        fontSize: 12,
         color: Color(0xFF40A3DB),
-        fontFamily: 'Lato-Light',
+        fontFamily: 'Lato-Black',
         fontWeight: FontWeight.w500,
       ),
     );

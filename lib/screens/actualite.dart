@@ -128,8 +128,9 @@ class _ActualitsState extends State<Actualits> {
                 child: Text(
                   'recent stories ...',
                   style: TextStyle(
-                    fontFamily: 'Lato-Light',
+                    fontFamily: 'Lato-Black',
                     color: Color.fromRGBO(0, 0, 0, 0.58),
+                    fontWeight: FontWeight.w600,
                     fontSize: 12,
                   ),
                 ),
@@ -169,6 +170,12 @@ class _ActualitsState extends State<Actualits> {
                           child: Text(
                             _store[index]['nom'].toString(),
                             overflow: TextOverflow.ellipsis,
+                            style: TextStyle(
+                              fontSize: 11,
+                              fontFamily: 'Lato-Black',
+                              fontWeight: FontWeight.w600,
+                            ),
+                            textAlign: TextAlign.center,
                           ),
                         ),
                       ],
@@ -218,10 +225,11 @@ class _ActualitsState extends State<Actualits> {
                                     child: Text(
                                       _post[index]['nom'].toString(),
                                       style: TextStyle(
-                                        fontFamily: 'Lato-Light',
+                                        fontFamily: 'Lato-Black',
                                         fontSize: 16,
                                         fontWeight: FontWeight.w600,
                                       ),
+                                      textAlign: TextAlign.center,
                                     ),
                                   ),
                                 ],
@@ -282,7 +290,7 @@ class _ActualitsState extends State<Actualits> {
                                                   fontWeight: FontWeight.w700,
                                                   color: Colors.black
                                                       .withOpacity(0.85),
-                                                  fontFamily: 'Lato-Light',
+                                                  fontFamily: 'Lato-Black',
                                                 ),
                                               ),
                                               SizedBox(
@@ -382,16 +390,17 @@ class _ActualitsState extends State<Actualits> {
                           child: Text(
                             '55 likes',
                             style: TextStyle(
-                              fontFamily: 'Lato-Light',
+                              fontFamily: 'Lato-Black',
                               color: Colors.black,
                               fontWeight: FontWeight.w500,
                               fontSize: 15,
                             ),
+                            textAlign: TextAlign.center,
                           ),
                         ),
                         Container(
                           height: 42,
-                          margin: const EdgeInsets.only(left: 15),
+                          margin: const EdgeInsets.only(left: 12),
                           child: Row(
                             children: [
                               Container(
@@ -400,9 +409,9 @@ class _ActualitsState extends State<Actualits> {
                                 child: Text(
                                   _post[index]['nom'].toString(),
                                   style: TextStyle(
-                                    fontFamily: 'Lato-Light',
+                                    fontFamily: 'Lato-Black',
                                     fontSize: 15,
-                                    fontWeight: FontWeight.w600,
+                                    fontWeight: FontWeight.w800,
                                   ),
                                 ),
                               ),
@@ -428,11 +437,12 @@ class _ActualitsState extends State<Actualits> {
                           child: Text(
                             '15 minutes ago',
                             style: TextStyle(
-                              fontFamily: 'Lato-Light',
+                              fontFamily: 'Lato-Black',
                               color: Color.fromRGBO(0, 0, 0, 0.55),
                               fontWeight: FontWeight.w500,
-                              fontSize: 13,
+                              fontSize: 12,
                             ),
+                            textAlign: TextAlign.center,
                           ),
                         ),
                       ],

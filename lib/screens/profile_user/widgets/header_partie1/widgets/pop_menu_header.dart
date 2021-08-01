@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 enum FilterOptions {
   editprofile,
   singout,
+  nul,
 }
 
 class PopMenuHeader extends StatefulWidget {
@@ -53,9 +54,17 @@ class _PopMenuHeaderState extends State<PopMenuHeader> {
             style: TextStyle(
               fontSize: 16,
               fontWeight: FontWeight.w600,
-              fontFamily: 'Lato-Light',
+              fontFamily: 'Lato-Black',
               color: Colors.black,
             ),
+          ),
+        ),
+        PopupMenuItem(
+          height: 5,
+          value: FilterOptions.nul,
+          child: Divider(
+            height: 3,
+            color: Colors.black,
           ),
         ),
         PopupMenuItem(
@@ -63,6 +72,7 @@ class _PopMenuHeaderState extends State<PopMenuHeader> {
           child: Text(
             'Sign out',
             style: TextStyle(
+              fontFamily: 'Lato-Black',
               fontSize: 20,
               fontWeight: FontWeight.w800,
               color: Colors.black,

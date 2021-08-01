@@ -30,11 +30,12 @@ class FollowersHeader extends StatelessWidget {
           child: Text(
             '243 Followers',
             style: TextStyle(
-              fontFamily: 'Lato-Light',
-              fontWeight: FontWeight.w800,
+              fontFamily: 'Lato-Black',
+              fontWeight: FontWeight.w500,
               color: Colors.black,
-              fontSize: 13,
+              fontSize: 12,
             ),
+            textAlign: TextAlign.center,
           ),
         ),
       ),

@@ -65,6 +65,8 @@ flutter:
     - assets/icons/Vector 4.png
     - assets/icons/Vector 5.png
     - assets/icons/Vector 6.png
+    - assets/icons/Vector 7.png
+    - assets/icons/menu.png
     - assets/icons/Chat.png
     - assets/icons/search icon.png
     - assets/icons/bookmark.png
@@ -73,6 +75,7 @@ flutter:
     - assets/icons/RandoLina (13) 1.png
     - assets/icons/Vector.png
     - assets/images/Rectangle 4.png
+    - assets/images/Ellipse 10.png
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
@@ -90,6 +93,12 @@ flutter:
     - family: Lato-Light
       fonts:
         - asset: assets/fonts/Lato-Light.ttf
+    - family: Lato-Black
+      fonts:
+        - asset: assets/fonts/Lato-Black.ttf
+    - family: Lato-Bloc
+      fonts:
+        - asset: assets/fonts/Lato-Bloc.ttf
   #       - asset: fonts/Schyler-Italic.ttf
   #         style: italic
   #   - family: Trajan Pro

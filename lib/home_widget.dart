@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:randolina/screens/actualite.dart';
 import 'package:randolina/screens/home_page.dart';
+import 'package:randolina/screens/profile_agence/agence_profile.dart';
 import 'package:randolina/screens/profile_user/user_profile.dart';
 
 class HomeWidget extends StatefulWidget {
@@ -14,7 +15,7 @@ class _HomeWidgetState extends State<HomeWidget> {
   List<Widget> widgetsOptions = [
     Actualits(),
     UserProfile(),
-    HomePage('3'),
+    AgenceProfile(),
     HomePage('4'),
     HomePage('5'),
   ];
@@ -36,7 +37,7 @@ class _HomeWidgetState extends State<HomeWidget> {
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           setState(() {
-            currentScreen = HomePage('3');
+            currentScreen = AgenceProfile();
             currentTab = 2;
           });
         },

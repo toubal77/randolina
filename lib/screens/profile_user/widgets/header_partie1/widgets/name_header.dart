@@ -11,10 +11,11 @@ class NameHeader extends StatelessWidget {
         'Marine Abdou',
         style: TextStyle(
           fontSize: 19,
-          fontFamily: 'Lato-Light',
+          fontFamily: 'Lato-Black',
           color: Colors.black,
           fontWeight: FontWeight.w600,
         ),
+        textAlign: TextAlign.center,
       ),
     );
   }
