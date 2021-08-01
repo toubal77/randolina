@@ -32,7 +32,7 @@ class AgenceProfile extends StatelessWidget {
           children: [
             HeaderAgence(),
             SizedBox(
-              height: 235,
+              height: 255,
               child: ListView.builder(
                 shrinkWrap: true,
                 scrollDirection: Axis.horizontal,
@@ -71,8 +71,8 @@ class AgenceProfile extends StatelessWidget {
                             alignment: Alignment.bottomCenter,
                             children: [
                               Container(
-                                width: 313,
-                                height: 170,
+                                width: 315,
+                                height: 220,
                                 decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(9),
                                   image: DecorationImage(
