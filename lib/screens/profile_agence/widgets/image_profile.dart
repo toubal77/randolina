@@ -10,13 +10,13 @@ class ImageProfile extends StatelessWidget {
       bottom: 0,
       child: Container(
         width: 103,
-        height: 28,
+        height: 31,
         decoration: BoxDecoration(
           color: Colors.white,
           border: Border.all(
             color: Color.fromRGBO(51, 77, 115, 0.38),
           ),
-          borderRadius: BorderRadius.circular(12),
+          borderRadius: BorderRadius.circular(15),
           boxShadow: [
             BoxShadow(
               color: Color.fromRGBO(51, 77, 115, 0.42),
