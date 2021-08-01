@@ -7,12 +7,12 @@ class NumFollowers extends StatelessWidget {
   Widget build(BuildContext context) {
     return Positioned(
       left: 18,
-      bottom: 5,
+      bottom: 6,
       child: Stack(
         children: [
           Container(
-            width: 105,
-            height: 105,
+            width: 110,
+            height: 110,
             decoration: BoxDecoration(
               color: Colors.white,
               border: Border.all(

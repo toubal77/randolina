@@ -10,13 +10,13 @@ class ImageProfile extends StatelessWidget {
       bottom: 0,
       child: Container(
         width: 103,
-        height: 26,
+        height: 28,
         decoration: BoxDecoration(
           color: Colors.white,
           border: Border.all(
             color: Color.fromRGBO(51, 77, 115, 0.38),
           ),
-          borderRadius: BorderRadius.circular(11),
+          borderRadius: BorderRadius.circular(12),
           boxShadow: [
             BoxShadow(
               color: Color.fromRGBO(51, 77, 115, 0.42),
@@ -27,15 +27,29 @@ class ImageProfile extends StatelessWidget {
         ),
         child: Center(
           child: Padding(
-            padding: const EdgeInsets.all(2),
-            child: Text(
-              '243 Followers',
-              overflow: TextOverflow.ellipsis,
-              style: TextStyle(
-                fontFamily: 'Lato-Black',
-                fontWeight: FontWeight.w800,
-                fontSize: 11,
-              ),
+            padding: const EdgeInsets.all(4),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+                Text(
+                  '243',
+                  overflow: TextOverflow.ellipsis,
+                  style: TextStyle(
+                    fontFamily: 'Lato-Black',
+                    fontWeight: FontWeight.bold,
+                    fontSize: 12,
+                  ),
+                ),
+                Text(
+                  'Followers',
+                  overflow: TextOverflow.ellipsis,
+                  style: TextStyle(
+                    //fontFamily: 'Lato-Black',
+                    fontWeight: FontWeight.w700,
+                    fontSize: 12,
+                  ),
+                ),
+              ],
             ),
           ),
         ),

@@ -6,34 +6,35 @@ class NameLocationClub extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.only(top: 30, left: 23),
+      margin: const EdgeInsets.only(top: 25, left: 23),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
             'O’rando Adventure',
             style: TextStyle(
-              fontSize: 19,
-              fontWeight: FontWeight.w600,
+              fontSize: 22,
+              fontWeight: FontWeight.w700,
               color: Colors.black,
-              fontFamily: 'Lato-Black',
+              //   fontFamily: 'Lato-Black',
             ),
             textAlign: TextAlign.center,
           ),
           Text(
             'Club de Randonnée',
             style: TextStyle(
-              fontFamily: 'Lato-Black',
-              fontSize: 12,
+              //   fontFamily: 'Lato-Black',
+              fontSize: 17,
               color: Color(0xFF40A3DB),
-              fontWeight: FontWeight.w500,
+              fontWeight: FontWeight.w400,
             ),
           ),
           Text(
             'Oran, Algeria',
             style: TextStyle(
-              fontFamily: 'Lato-Black',
-              fontSize: 9,
+              //     fontFamily: 'Lato-Black',
+              fontSize: 14,
+              fontWeight: FontWeight.w400,
               color: Colors.black.withOpacity(0.87),
             ),
           ),

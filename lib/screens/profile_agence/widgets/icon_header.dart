@@ -7,7 +7,7 @@ class IconHeader extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: 110,
-      margin: const EdgeInsets.only(right: 26, bottom: 20),
+      margin: const EdgeInsets.only(right: 26, bottom: 15),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
@@ -16,16 +16,16 @@ class IconHeader extends StatelessWidget {
             fit: BoxFit.cover,
           ),
           SizedBox(
-            width: 24,
-            height: 24,
+            width: 27,
+            height: 27,
             child: Image.asset(
               'assets/icons/search icon.png',
               fit: BoxFit.cover,
             ),
           ),
           SizedBox(
-            height: 24,
-            width: 24,
+            height: 27,
+            width: 27,
             child: Image.asset(
               'assets/icons/bookmark.png',
               fit: BoxFit.cover,
