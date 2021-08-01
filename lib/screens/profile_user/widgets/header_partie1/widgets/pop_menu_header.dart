@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
 enum FilterOptions {
-  EditProfile,
-  SingOut,
+  editprofile,
+  singout,
 }
 
 class PopMenuHeader extends StatefulWidget {
@@ -26,19 +26,19 @@ class _PopMenuHeaderState extends State<PopMenuHeader> {
       )),
       onSelected: (FilterOptions selectedValue) {
         setState(() {
-          if (selectedValue == FilterOptions.EditProfile) {
+          if (selectedValue == FilterOptions.editprofile) {
             showPopMenu = true;
           } else {
             showPopMenu = false;
           }
-          if (selectedValue == FilterOptions.SingOut) {
+          if (selectedValue == FilterOptions.singout) {
             showPopMenu = true;
           } else {
             showPopMenu = false;
           }
         });
       },
-      icon: Container(
+      icon: SizedBox(
         width: 13,
         child: Image.asset(
           'assets/icons/Vector 6.png',
@@ -47,31 +47,27 @@ class _PopMenuHeaderState extends State<PopMenuHeader> {
       ),
       itemBuilder: (_) => [
         PopupMenuItem(
-          child: Container(
-            child: Text(
-              'Edit profil',
-              style: TextStyle(
-                fontSize: 16,
-                fontWeight: FontWeight.w600,
-                fontFamily: 'Lato-Light',
-                color: Colors.black,
-              ),
+          value: FilterOptions.editprofile,
+          child: Text(
+            'Edit profil',
+            style: TextStyle(
+              fontSize: 16,
+              fontWeight: FontWeight.w600,
+              fontFamily: 'Lato-Light',
+              color: Colors.black,
             ),
           ),
-          value: FilterOptions.EditProfile,
         ),
         PopupMenuItem(
-          child: Container(
-            child: Text(
-              'Sign out',
-              style: TextStyle(
-                fontSize: 20,
-                fontWeight: FontWeight.w800,
-                color: Colors.black,
-              ),
+          value: FilterOptions.singout,
+          child: Text(
+            'Sign out',
+            style: TextStyle(
+              fontSize: 20,
+              fontWeight: FontWeight.w800,
+              color: Colors.black,
             ),
           ),
-          value: FilterOptions.SingOut,
         ),
       ],
     );

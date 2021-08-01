@@ -8,10 +8,10 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xE5E5E5),
+      backgroundColor: Color(0x00e5e5e5),
       body: Center(
         child: Text(
-          'Home Page ' + index!,
+          'Home Page ${index!}',
           style: TextStyle(
             fontSize: 25,
           ),

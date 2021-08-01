@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:randolina/screens/profileUser/sliverPersistentHeaderDelegateImpl.dart';
-import 'package:randolina/screens/profileUser/widgets/header.dart';
+import 'package:randolina/screens/profile_user/sliver_persistent_header_delegate_impl.dart';
+import 'package:randolina/screens/profile_user/widgets/header.dart';
 
 // ignore: must_be_immutable
 class UserProfile extends StatefulWidget {
@@ -12,21 +12,21 @@ class _UserProfileState extends State<UserProfile>
     with SingleTickerProviderStateMixin {
   late TabController _tabController;
   final List<Widget> _icons = [
-    Container(
+    SizedBox(
       height: 50,
       child: Icon(
         Icons.home,
         size: 30,
       ),
     ),
-    Container(
+    SizedBox(
       height: 50,
       child: Icon(
         Icons.image,
         size: 30,
       ),
     ),
-    Container(
+    SizedBox(
       height: 50,
       child: Icon(
         Icons.build,
@@ -34,7 +34,7 @@ class _UserProfileState extends State<UserProfile>
       ),
     ),
   ];
-  List _post = [
+  final List _post = [
     {
       'profile': 'assets/images/évent 1.png',
       'image': 'assets/images/Rectangle 4.png',
@@ -188,11 +188,9 @@ class _UserProfileState extends State<UserProfile>
                         Container(
                           color: Colors.white,
                           child: GridView.builder(
-                            shrinkWrap: false,
-                            scrollDirection: Axis.vertical,
                             itemCount: _post.length,
                             gridDelegate:
-                                new SliverGridDelegateWithFixedCrossAxisCount(
+                                SliverGridDelegateWithFixedCrossAxisCount(
                               crossAxisCount: 3,
                               childAspectRatio:
                                   MediaQuery.of(context).size.width /
@@ -204,11 +202,10 @@ class _UserProfileState extends State<UserProfile>
                                   color: Colors.blue,
                                   border: Border.all(
                                     color: Colors.black,
-                                    width: 1,
                                   ),
                                 ),
                                 child: Image.asset(
-                                  _post[index]['image'],
+                                  _post[index]['image'].toString(),
                                   fit: BoxFit.cover,
                                 ),
                               );
@@ -218,11 +215,9 @@ class _UserProfileState extends State<UserProfile>
                         Container(
                           color: Colors.white,
                           child: GridView.builder(
-                            shrinkWrap: false,
-                            scrollDirection: Axis.vertical,
                             itemCount: 10,
                             gridDelegate:
-                                new SliverGridDelegateWithFixedCrossAxisCount(
+                                SliverGridDelegateWithFixedCrossAxisCount(
                               crossAxisCount: 3,
                               childAspectRatio:
                                   MediaQuery.of(context).size.width /
@@ -234,11 +229,10 @@ class _UserProfileState extends State<UserProfile>
                                   color: Colors.blue,
                                   border: Border.all(
                                     color: Colors.black,
-                                    width: 1,
                                   ),
                                 ),
                                 child: Image.asset(
-                                  _post[index]['image'],
+                                  _post[index]['image'].toString(),
                                   fit: BoxFit.cover,
                                 ),
                               );
@@ -248,11 +242,9 @@ class _UserProfileState extends State<UserProfile>
                         Container(
                           color: Colors.white,
                           child: GridView.builder(
-                            shrinkWrap: false,
-                            scrollDirection: Axis.vertical,
                             itemCount: 4,
                             gridDelegate:
-                                new SliverGridDelegateWithFixedCrossAxisCount(
+                                SliverGridDelegateWithFixedCrossAxisCount(
                               crossAxisCount: 3,
                               childAspectRatio:
                                   MediaQuery.of(context).size.width /
@@ -264,11 +256,10 @@ class _UserProfileState extends State<UserProfile>
                                   color: Colors.blue,
                                   border: Border.all(
                                     color: Colors.black,
-                                    width: 1,
                                   ),
                                 ),
                                 child: Image.asset(
-                                  _post[index]['image'],
+                                  _post[index]['image'].toString(),
                                   fit: BoxFit.cover,
                                 ),
                               );

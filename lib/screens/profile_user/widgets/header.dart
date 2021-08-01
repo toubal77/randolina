@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:randolina/screens/profileUser/widgets/followersHeader.dart';
-import 'package:randolina/screens/profileUser/widgets/headerPartie1/headerPartie1.dart';
-import 'package:randolina/screens/profileUser/widgets/imageProfile.dart';
+import 'package:randolina/screens/profile_user/widgets/followers_header.dart';
+import 'package:randolina/screens/profile_user/widgets/header_partie1/header_partie1.dart';
+import 'package:randolina/screens/profile_user/widgets/image_profile.dart';
 import 'package:readmore/readmore.dart';
 
 class Header extends StatefulWidget {
@@ -42,7 +42,6 @@ class _HeaderState extends State<Header> {
                   boxShadow: [
                     BoxShadow(
                       color: Color(0xFF334D73).withOpacity(0.20),
-                      spreadRadius: 0,
                       blurRadius: 4,
                       offset: Offset(0, 2),
                     ),
@@ -73,8 +72,8 @@ class _HeaderState extends State<Header> {
             ],
           ),
         ),
-        FollowersHeader(isExpand),
-        ImageProfileHeader(isExpand),
+        FollowersHeader(isExpand: isExpand),
+        ImageProfileHeader(isExpand: isExpand),
       ],
     );
   }

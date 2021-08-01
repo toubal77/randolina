@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 // ignore: must_be_immutable
 class FollowersHeader extends StatelessWidget {
   bool isExpand;
-  FollowersHeader(this.isExpand);
+  FollowersHeader({required this.isExpand});
   @override
   Widget build(BuildContext context) {
     return Positioned(
@@ -16,14 +16,11 @@ class FollowersHeader extends StatelessWidget {
           color: Colors.white,
           borderRadius: BorderRadius.circular(11),
           border: Border.all(
-            width: 1,
-            style: BorderStyle.solid,
             color: Color.fromRGBO(51, 77, 115, 0.38),
           ),
           boxShadow: [
             BoxShadow(
               color: Color(0xFF334D73).withOpacity(0.42),
-              spreadRadius: 0,
               blurRadius: 4,
               offset: Offset(0, 3),
             ),

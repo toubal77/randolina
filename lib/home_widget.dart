@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:randolina/screens/actualite.dart';
-import 'package:randolina/screens/homePage.dart';
-import 'package:randolina/screens/profileUser/user_profile.dart';
+import 'package:randolina/screens/home_page.dart';
+import 'package:randolina/screens/profile_user/user_profile.dart';
 
 class HomeWidget extends StatefulWidget {
   @override
@@ -20,7 +20,7 @@ class _HomeWidgetState extends State<HomeWidget> {
   ];
   final PageStorageBucket bucket = PageStorageBucket();
   Widget currentScreen = Actualits();
-  void onTapBottomNavigation(index) {
+  void onTapBottomNavigation(int index) {
     setState(() {
       selectIndex = index;
     });
@@ -30,23 +30,26 @@ class _HomeWidgetState extends State<HomeWidget> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: PageStorage(
-        child: currentScreen,
         bucket: bucket,
+        child: currentScreen,
       ),
       floatingActionButton: FloatingActionButton(
-        child: Image.asset('assets/icons/Plus.png'),
         onPressed: () {
           setState(() {
             currentScreen = HomePage('3');
             currentTab = 2;
           });
         },
+        child: Image.asset(
+          'assets/icons/Plus.png',
+          fit: BoxFit.cover,
+        ),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       bottomNavigationBar: BottomAppBar(
         shape: CircularNotchedRectangle(),
         notchMargin: 10,
-        child: Container(
+        child: SizedBox(
           height: 60,
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -62,7 +65,10 @@ class _HomeWidgetState extends State<HomeWidget> {
                         currentTab = 0;
                       });
                     },
-                    child: Image.asset('assets/icons/Chat.png'),
+                    child: Image.asset(
+                      'assets/icons/Chat.png',
+                      fit: BoxFit.cover,
+                    ),
                   ),
                   SizedBox(
                     width: 10,
@@ -75,7 +81,10 @@ class _HomeWidgetState extends State<HomeWidget> {
                         currentTab = 1;
                       });
                     },
-                    child: Image.asset('assets/icons/Store.png'),
+                    child: Image.asset(
+                      'assets/icons/Store.png',
+                      fit: BoxFit.cover,
+                    ),
                   ),
                 ],
               ),
@@ -91,7 +100,10 @@ class _HomeWidgetState extends State<HomeWidget> {
                         currentTab = 3;
                       });
                     },
-                    child: Image.asset('assets/icons/Love.png'),
+                    child: Image.asset(
+                      'assets/icons/Love.png',
+                      fit: BoxFit.cover,
+                    ),
                   ),
                   SizedBox(
                     width: 10,
@@ -104,7 +116,10 @@ class _HomeWidgetState extends State<HomeWidget> {
                         currentTab = 4;
                       });
                     },
-                    child: Image.asset('assets/icons/Profil.png'),
+                    child: Image.asset(
+                      'assets/icons/Profil.png',
+                      fit: BoxFit.cover,
+                    ),
                   ),
                 ],
               ),

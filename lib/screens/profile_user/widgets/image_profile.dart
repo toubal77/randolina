@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 // ignore: must_be_immutable
 class ImageProfileHeader extends StatelessWidget {
   bool isExpand;
-  ImageProfileHeader(this.isExpand);
+  ImageProfileHeader({required this.isExpand});
   @override
   Widget build(BuildContext context) {
     return Positioned(
@@ -17,7 +17,6 @@ class ImageProfileHeader extends StatelessWidget {
           borderRadius: BorderRadius.circular(47),
           border: Border.all(
             width: 2,
-            style: BorderStyle.solid,
             color: Colors.black,
           ),
           // la bordeur de l'image avec le blue c'est dans l'image
@@ -25,7 +24,6 @@ class ImageProfileHeader extends StatelessWidget {
           boxShadow: [
             BoxShadow(
               color: Color(0xFF334D73).withOpacity(0.43),
-              spreadRadius: 0,
               blurRadius: 4,
               offset: Offset(0, 2),
             ),

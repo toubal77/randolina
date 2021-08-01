@@ -8,7 +8,7 @@ class SliverPersistentHeaderDelegateImpl
   const SliverPersistentHeaderDelegateImpl({
     Color color = Colors.transparent,
     required this.tabBar,
-  }) : this.color = color;
+  }) : color = color;
 
   @override
   Widget build(
