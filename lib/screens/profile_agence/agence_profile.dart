@@ -351,9 +351,10 @@ class AgenceProfile extends StatelessWidget {
                           borderRadius: BorderRadius.circular(70),
                           boxShadow: [
                             BoxShadow(
-                                blurRadius: 4,
-                                offset: Offset(1, 3),
-                                color: Color(0xFF334D73).withOpacity(0.20)),
+                              blurRadius: 4,
+                              offset: Offset(1, 3),
+                              color: Color(0xFF334D73).withOpacity(0.20),
+                            ),
                           ],
                           image: DecorationImage(
                             image: AssetImage(
