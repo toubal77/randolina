@@ -84,15 +84,16 @@ class AgenceProfile extends StatelessWidget {
                                 ),
                               ),
                               Positioned(
-                                bottom: 20,
+                                bottom: 10,
                                 child: Text(
                                   _events[index]['nom'].toString(),
                                   style: TextStyle(
-                                    fontSize: 20,
+                                    fontSize: 23,
                                     fontWeight: FontWeight.w800,
                                     letterSpacing: -0.33,
                                     color: Colors.white,
                                   ),
+                                  textAlign: TextAlign.center,
                                 ),
                               ),
                               Positioned(
@@ -121,8 +122,8 @@ class AgenceProfile extends StatelessWidget {
                                     Text(
                                   _events[index]['date'].toString(),
                                   style: TextStyle(
-                                    fontSize: 15,
-                                    fontWeight: FontWeight.bold,
+                                    fontSize: 18,
+                                    fontWeight: FontWeight.w900,
                                     letterSpacing: -0.33,
                                     color: Colors.black,
                                   ),
