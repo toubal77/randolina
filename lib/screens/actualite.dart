@@ -415,16 +415,18 @@ class _ActualitsState extends State<Actualits> {
                                   ),
                                 ),
                               ),
-                              Container(
-                                width: 180,
-                                margin:
-                                    const EdgeInsets.only(top: 16, left: 10),
-                                child: Text(
-                                  _post[index]['commentaire'].toString(),
-                                  style: TextStyle(
-                                    fontFamily: 'Lato-Light',
-                                    fontSize: 15,
-                                    fontWeight: FontWeight.w600,
+                              Flexible(
+                                child: Container(
+                                  width: 180,
+                                  margin:
+                                      const EdgeInsets.only(top: 16, left: 10),
+                                  child: Text(
+                                    _post[index]['commentaire'].toString(),
+                                    style: TextStyle(
+                                      fontFamily: 'Lato-Light',
+                                      fontSize: 15,
+                                      fontWeight: FontWeight.w600,
+                                    ),
                                   ),
                                 ),
                               ),
